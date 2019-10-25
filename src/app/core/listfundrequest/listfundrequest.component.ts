@@ -9,6 +9,7 @@ import { FundserviceService } from 'src/app/service/fundservice.service';
 export class ListfundrequestComponent implements OnInit {
 
   fundList:any;
+  adminstatus:boolean=true;
 
   constructor(
     private fund:FundserviceService
