@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginserviceService } from 'src/app/service/loginservice.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
   password:any;
 
   constructor(
-    private login:LoginserviceService
+    private login:LoginserviceService, private router: Router
   ) { }
 
   ngOnInit() {
@@ -23,13 +24,21 @@ export class LoginComponent implements OnInit {
       'password':this.password
       
     };
+
+    var user = { "id" : 1 , "name":"Keyne"};
+    localStorage.setItem("LOGGED_IN_USER", JSON.stringify(user));
+    console.log(user);
+    this.router.navigate(['viewfund']);
+    /*
     this.login.adminLogin(formData).subscribe( (res) => {
       console.log(JSON.stringify(res));
       alert('success');
     }, (err) =>{
       console.log('error=>'+JSON.stringify(err));
     });
+    */
   }
+ 
 
 
 }

@@ -20,16 +20,19 @@ export class AddfundrequestComponent implements OnInit {
   }
   addrequest()
   {
+   let user:any= JSON.parse(localStorage.getItem('LOGGED_IN_USER'));
     let formData :any= {
       'categoryId':this.categoryId,
       'fundNeeded':this.fundNeeded,
-      'requestedBy':this.requestedBy
+      'requestedBy':user.id
     };
+    console.log(formData);
     this.admin.addFundRequest(formData).subscribe( (res) => {
       console.log(JSON.stringify(res));
-      alert('success');
+      alert('Fund Added successfully');
     }, (err) =>{
       console.log('error=>'+JSON.stringify(err));
+      alert(err.error.message);
     });
   }
 

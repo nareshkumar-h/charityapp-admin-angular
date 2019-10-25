@@ -1,5 +1,33 @@
-<p>addfundrequest works!</p>
-<input type="text" name="" id="" [(ngModel)]="categoryId" placeholder="categoryId"><br>
-<input type="text" name="" id="" [(ngModel)]="fundNeeded" placeholder="fundNeeded"><br>
-<input type="text" name="" id="" [(ngModel)]="requestedBy" placeholder="requestedBy">
-<button class="btn btn-outline-info" (click)="addrequest()">Add  fund</button>
+
+<body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="card card-signin my-5">
+            <div class="card-body">
+              <h5 class="card-title text-center">Add Fund Request</h5>
+              
+                <div class="form-label-group">
+                 <label for="inputEmail">Category Id</label>
+                  <input type="text" [(ngModel)]= "categoryId" id="categoryId" class="form-control" placeholder="Enter Category Id" required autofocus>
+                </div>
+                <div class="form-label-group">
+                 <label for="inputPassword">Fund Needed</label>
+                  <input type="number" [(ngModel)]= "fundNeeded" id="fundNeeded" class="form-control" placeholder="Enter fund Needed" required>
+                </div>
+               <!-- <div class="form-label-group">
+                    <label for="inputPassword">Requested By</label>
+                     <input type="password" [(ngModel)]= "requestedBy" id="requestedBy" class="form-control" placeholder="Enter requested By" required>
+                   </div>-->
+                   <br/>
+                   <br/>
+            
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" (click)="addrequest()" type="submit">Add Fund</button>
+                <hr class="my-4">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
