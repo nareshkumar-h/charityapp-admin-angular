@@ -1,0 +1,21 @@
+<p>listfundrequest works!</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Request Id</th>
+            <th>Category id</th>
+            <th>Fund Needed</th>
+            <th>Requested By</th>
+            <th>Created Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of fundList">
+            <td>{{data.id}}</td>
+            <td>{{data.categoryId}}</td>
+            <td>{{data.fundNeeded}}</td>
+            <td>{{data.requestedBy}}</td>
+            <td>{{data.createdDate}}</td>
+        </tr>
+    </tbody>
+</table>
