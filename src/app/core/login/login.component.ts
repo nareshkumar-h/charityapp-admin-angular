@@ -24,19 +24,23 @@ export class LoginComponent implements OnInit {
       'password':this.password
       
     };
-
+    /*
     var user = { "id" : 1 , "name":"Keyne"};
     localStorage.setItem("LOGGED_IN_USER", JSON.stringify(user));
     console.log(user);
     this.router.navigate(['viewfund']);
-    /*
+    */
+    
     this.login.adminLogin(formData).subscribe( (res) => {
       console.log(JSON.stringify(res));
+       localStorage.setItem("LOGGED_IN_USER", JSON.stringify(res));
+    //console.log(user);
+    this.router.navigate(['viewfund']);
       alert('success');
     }, (err) =>{
       console.log('error=>'+JSON.stringify(err));
     });
-    */
+   
   }
  
 
