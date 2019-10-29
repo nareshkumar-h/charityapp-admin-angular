@@ -14,6 +14,9 @@ import { FormsModule }  from '@angular/forms';
 import { LoginComponent } from './core/login/login.component';
 import { FundserviceService } from './service/fundservice.service';
 import { LoginserviceService } from './service/loginservice.service';
+import { NewCategoryComponent } from './new-category/new-category.component';
+import { ListCategoryComponent } from './list-category/list-category.component';
+import { AddCategoryService } from './add-category.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,9 @@ import { LoginserviceService } from './service/loginservice.service';
     FooterComponent,
     AddfundrequestComponent,
     ListfundrequestComponent,
-    LoginComponent
+    LoginComponent,
+    NewCategoryComponent,
+    ListCategoryComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,8 @@ import { LoginserviceService } from './service/loginservice.service';
   providers: [
     AdminserviceService,
     FundserviceService,
-    LoginserviceService
+    LoginserviceService,
+    AddCategoryService
   ],
   bootstrap: [AppComponent]
 })
