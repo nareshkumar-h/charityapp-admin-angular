@@ -14,10 +14,13 @@ export class NewCategoryComponent implements OnInit {
   { }
   ngOnInit() {
   }
-  addContribute()
+
+
+  addcategory()
   {
+    let user = JSON.parse(localStorage.getItem("LOGGED_IN_USER"));
     let formData :any= {
- 'createdBy':this.createdBy,
+ 'createdBy':user.id,
  'categoryName':this.categoryName
 };
 this.donor.addcategory(formData).subscribe( (res) => {

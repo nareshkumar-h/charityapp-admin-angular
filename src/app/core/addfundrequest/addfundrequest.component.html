@@ -1,5 +1,28 @@
-<p>addfundrequest works!</p>
-<input type="text" name="" id="" [(ngModel)]="categoryId" placeholder="categoryId"><br>
-<input type="text" name="" id="" [(ngModel)]="fundNeeded" placeholder="fundNeeded"><br>
-<input type="text" name="" id="" [(ngModel)]="requestedBy" placeholder="requestedBy">
-<button class="btn btn-outline-info" (click)="addrequest()">Add  fund</button>
+
+<body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="card card-signin my-5">
+            <div class="card-body">
+              <h5 class="card-title text-center">Add Fund Request</h5>
+              
+                <div class="form-label-group">
+                 <label for="inputEmail">Category Id</label>
+                  <input type="text" [(ngModel)]= "categoryId" id="categoryId" class="form-control" placeholder="Enter Category Id" required autofocus>
+                </div>
+                <div class="form-label-group">
+                 <label for="inputPassword">Fund Needed</label>
+                  <input type="number" [(ngModel)]= "fundNeeded" id="fundNeeded" class="form-control" placeholder="Enter fund Needed" required>
+                </div>
+                   <br/>
+                   <br/>
+                <button (click)="addrequest()"  type="submit" class="btn btn-outline-secondary">Add Fund</button>
+            <button style="margin-left: 5px;"  type="reset" class="btn btn-outline-secondary">reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+

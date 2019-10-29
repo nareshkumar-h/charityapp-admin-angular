@@ -4,18 +4,14 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class AdminserviceService {
+export class AdminregisterService {
 
   constructor(
     private http:HttpClient
   ) { }
-
-  apiUrl='https://charity-requestor.herokuapp.com/';
-
-  addFundRequest(formData:any):any
+  apiUrl='https://userapp-v1.herokuapp.com';
+  adminRegister(formData:any):any
   {
-    
-    return this.http.post(this.apiUrl+'fundrequest',formData);
+    return this.http.post(this.apiUrl+'/admin/register',formData);
   }
-  
 }

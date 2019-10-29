@@ -9,7 +9,8 @@ export class FundserviceService {
   constructor(
     private http:HttpClient
   ) { }
-  apiUrl:string = 'http://localhost:9003/';
+  //apiUrl:string = 'http://localhost:9003/';
+  apiUrl='https://charity-requestor.herokuapp.com/';
 
   viewFundRequest():any
   {

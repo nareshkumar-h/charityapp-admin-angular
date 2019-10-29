@@ -1,37 +1,33 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginserviceService } from 'src/app/service/loginservice.service';
+import {AdminregisterService} from 'src/app/service/adminregister.service';
 import { Router } from '@angular/router';
 
+
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-adminregister',
+  templateUrl: './adminregister.component.html',
+  styleUrls: ['./adminregister.component.css']
 })
-export class LoginComponent implements OnInit {
+export class AdminregisterComponent implements OnInit {
+  name:any;
   email:any;
   password:any;
 
   constructor(
-    private login:LoginserviceService, private router: Router
+    private register:AdminregisterService, private router: Router
   ) { }
 
   ngOnInit() {
   }
-  adminlogin()
+  adminregister()
   {
     let formData :any= {
+      'name':this.name,
       'email':this.email,
       'password':this.password
       
     };
-    /*
-    var user = { "id" : 1 , "name":"Keyne"};
-    localStorage.setItem("LOGGED_IN_USER", JSON.stringify(user));
-    console.log(user);
-    this.router.navigate(['viewfund']);
-    */
-    
-    this.login.adminLogin(formData).subscribe( (res) => {
+    this.register.adminRegister(formData).subscribe( (res) => {
       console.log(JSON.stringify(res));
        localStorage.setItem("LOGGED_IN_USER", JSON.stringify(res));
     //console.log(user);
@@ -42,7 +38,5 @@ export class LoginComponent implements OnInit {
     });
    
   }
- 
-
 
 }

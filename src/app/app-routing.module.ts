@@ -5,6 +5,7 @@ import { ListfundrequestComponent } from './core/listfundrequest/listfundrequest
 import { LoginComponent } from './core/login/login.component';
 import { NewCategoryComponent } from './new-category/new-category.component';
 import { ListCategoryComponent } from './list-category/list-category.component';
+import { AdminregisterComponent } from './core/adminregister/adminregister.component';
 
 
 const routes: Routes = [
@@ -29,13 +30,14 @@ const routes: Routes = [
     path:'addcategory',
     component:NewCategoryComponent
   },
-  {
-    path:'viewcategory',
-    component:ListCategoryComponent
-  },
+  
   {
     path:'new-category',
-    component:NewCategoryComponent
+    component:NewCategoryComponent,
+  },
+  {
+    path:'adminregister',
+    component:AdminregisterComponent
   }
 ];
 
