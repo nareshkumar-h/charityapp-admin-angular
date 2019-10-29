@@ -10,7 +10,7 @@ export class AdminserviceService {
     private http:HttpClient
   ) { }
 
-  apiUrl:string = 'http://localhost:9003/';
+  apiUrl='https://userapp-v1.herokuapp.com';
 
   addFundRequest(formData:any):any
   {

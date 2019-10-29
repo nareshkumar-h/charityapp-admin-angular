@@ -15,15 +15,10 @@
                  <label for="inputPassword">Fund Needed</label>
                   <input type="number" [(ngModel)]= "fundNeeded" id="fundNeeded" class="form-control" placeholder="Enter fund Needed" required>
                 </div>
-               <!-- <div class="form-label-group">
-                    <label for="inputPassword">Requested By</label>
-                     <input type="password" [(ngModel)]= "requestedBy" id="requestedBy" class="form-control" placeholder="Enter requested By" required>
-                   </div>-->
                    <br/>
                    <br/>
-            
-                <button class="btn btn-lg btn-primary btn-block text-uppercase" (click)="addrequest()" type="submit">Add Fund</button>
-                <hr class="my-4">
+                <button (click)="addrequest()"  type="submit" class="btn btn-outline-secondary">Add Fund</button>
+            <button style="margin-left: 5px;"  type="reset" class="btn btn-outline-secondary">reset</button>
             </div>
           </div>
         </div>

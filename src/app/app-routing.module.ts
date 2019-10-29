@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AddfundrequestComponent } from './core/addfundrequest/addfundrequest.component';
 import { ListfundrequestComponent } from './core/listfundrequest/listfundrequest.component';
 import { LoginComponent } from './core/login/login.component';
+import { AdminregisterComponent } from './core/adminregister/adminregister.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path:'adminlogin',
     component:LoginComponent
+  },
+  {
+    path:'adminregister',
+    component:AdminregisterComponent
   }
 ];
 

@@ -14,6 +14,8 @@ import { FormsModule }  from '@angular/forms';
 import { LoginComponent } from './core/login/login.component';
 import { FundserviceService } from './service/fundservice.service';
 import { LoginserviceService } from './service/loginservice.service';
+import { AdminregisterComponent } from './core/adminregister/adminregister.component';
+import { AdminregisterService } from './service/adminregister.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,8 @@ import { LoginserviceService } from './service/loginservice.service';
     FooterComponent,
     AddfundrequestComponent,
     ListfundrequestComponent,
-    LoginComponent
+    LoginComponent,
+    AdminregisterComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { LoginserviceService } from './service/loginservice.service';
   providers: [
     AdminserviceService,
     FundserviceService,
-    LoginserviceService
+    LoginserviceService,
+    AdminregisterService
   ],
   bootstrap: [AppComponent]
 })
