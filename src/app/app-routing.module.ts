@@ -6,6 +6,8 @@ import { LoginComponent } from './core/login/login.component';
 import { NewCategoryComponent } from './new-category/new-category.component';
 import { ListCategoryComponent } from './list-category/list-category.component';
 import { AdminregisterComponent } from './core/adminregister/adminregister.component';
+import { ListadminComponent } from './core/listadmin/listadmin.component';
+import { ListdonorComponent } from './core/listdonor/listdonor.component';
 
 
 const routes: Routes = [
@@ -38,6 +40,14 @@ const routes: Routes = [
   {
     path:'adminregister',
     component:AdminregisterComponent
+  },
+  {
+    path:"admin/list",
+    component:ListadminComponent
+  },
+  {
+    path:"donor/list",
+    component:ListdonorComponent
   }
 ];
 

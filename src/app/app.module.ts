@@ -19,6 +19,10 @@ import { ListCategoryComponent } from './list-category/list-category.component';
 import { AddCategoryService } from './add-category.service';
 import { AdminregisterComponent } from './core/adminregister/adminregister.component';
 import { AdminregisterService } from './service/adminregister.service';
+import { ListadminComponent } from './core/listadmin/listadmin.component';
+import { ListadminService } from './service/listadmin.service';
+import { ListdonorComponent } from './core/listdonor/listdonor.component';
+import { ListdonorService } from './service/listdonor.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +33,9 @@ import { AdminregisterService } from './service/adminregister.service';
     LoginComponent,
     NewCategoryComponent,
     ListCategoryComponent,
-    AdminregisterComponent
+    AdminregisterComponent,
+    ListadminComponent,
+    ListdonorComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +48,9 @@ import { AdminregisterService } from './service/adminregister.service';
     FundserviceService,
     LoginserviceService,
     AddCategoryService,
-    AdminregisterService
+    AdminregisterService,
+    ListadminService,
+    ListdonorService
   ],
   bootstrap: [AppComponent]
 })

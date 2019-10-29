@@ -1,0 +1,26 @@
+<div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card border-secondary">
+              <div class="card-body">
+                <i class="card-img-top ion-ios-paper-outline" style="font-size: 70px;background-color: rgb(248, 248, 248);padding: 0 10px;"></i>
+                <h4 class="card-title">Admin list</h4>
+                <div class="card-text">
+                        <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let data of users">
+                                        <td>{{data.name}}</td>
+                                        <td>{{data.email}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+              </div>
+            </div>
+        </div>
+    </div>
