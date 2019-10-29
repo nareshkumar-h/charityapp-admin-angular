@@ -19,6 +19,6 @@ export class AddCategoryService {
   }
   listcategory():any
 {
- return this.http.get(this.apiUrl+'categories/listCategory');
+ return this.http.get(this.apiUrl+'categories');
 }
 }
