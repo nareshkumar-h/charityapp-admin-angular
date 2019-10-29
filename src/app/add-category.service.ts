@@ -15,7 +15,7 @@ export class AddCategoryService {
    addcategory(formData:any):any
    {
     console.log(formData);
-    return this.http.post(this.apiUrl+'Categories',formData);
+    return this.http.post(this.apiUrl+'categories',formData);
   }
   listcategory():any
 {
