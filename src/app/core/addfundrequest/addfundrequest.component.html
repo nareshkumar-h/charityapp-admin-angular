@@ -12,9 +12,9 @@
                  <!-- <input type="text" [(ngModel)]= "categoryId" id="categoryId" class="form-control" placeholder="Enter Category Id" required autofocus>
                   -->
                   <select name="Category Id"  [(ngModel)]="categoryId"id="categoryId"class="form-control">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
+                      
+                    <option *ngFor="let data of categories" value="{{data.id }}">{{data.categoryName}}</option>
+                  
                 </select>
                 </div>
                 <div class="form-label-group">
