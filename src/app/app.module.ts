@@ -23,6 +23,9 @@ import { ListadminComponent } from './core/listadmin/listadmin.component';
 import { ListadminService } from './service/listadmin.service';
 import { ListdonorComponent } from './core/listdonor/listdonor.component';
 import { ListdonorService } from './service/listdonor.service';
+import { AddVideoComponent } from './add-video/add-video.component';
+import { ListvideoComponent } from './listvideo/listvideo.component';
+import { AuthService } from './service/auth.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +34,9 @@ import { ListdonorService } from './service/listdonor.service';
     AddfundrequestComponent,
     ListfundrequestComponent,
     LoginComponent,
+    AdminregisterComponent,
+    AddVideoComponent,
+    ListvideoComponent,
     NewCategoryComponent,
     ListCategoryComponent,
     AdminregisterComponent,
@@ -50,7 +56,8 @@ import { ListdonorService } from './service/listdonor.service';
     AddCategoryService,
     AdminregisterService,
     ListadminService,
-    ListdonorService
+    ListdonorService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

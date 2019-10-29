@@ -8,6 +8,8 @@ import { ListCategoryComponent } from './list-category/list-category.component';
 import { AdminregisterComponent } from './core/adminregister/adminregister.component';
 import { ListadminComponent } from './core/listadmin/listadmin.component';
 import { ListdonorComponent } from './core/listdonor/listdonor.component';
+import { AddVideoComponent } from './add-video/add-video.component';
+import { ListvideoComponent } from './listvideo/listvideo.component';
 
 
 const routes: Routes = [
@@ -48,6 +50,14 @@ const routes: Routes = [
   {
     path:"donor/list",
     component:ListdonorComponent
+  },
+  {
+    path:'addvideo',
+    component:AddVideoComponent
+  },
+  {
+    path:'viewvideo',
+    component:ListvideoComponent
   }
 ];
 

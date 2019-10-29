@@ -1,0 +1,30 @@
+
+<body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="card card-signin my-5">
+            <div class="card-body">
+              <h5 class="card-title text-center">Add Video</h5>
+              
+              
+                <div class="form-label-group">
+                 <label for="inputName">Video Title</label>
+                  <input type="text" [(ngModel)]= "videoName" id="videoName" class="form-control" placeholder="Enter video Name" required>
+                </div>
+                <div class="form-label-group">
+                    <label for="inputUrl">URL</label>
+                     <input type="text" [(ngModel)]= "url" id="url" class="form-control" placeholder="Enter url" required>
+                   </div>
+                   <br/>
+                   <br/>
+                <button (click)="addvideo()"  type="submit" class="btn btn-outline-secondary">Add video</button>
+            <button style="margin-left: 5px;"  type="reset" class="btn btn-outline-secondary">reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+

@@ -6,34 +6,45 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
 
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="!isLoggedIn()">
               <a class="nav-link"  routerLink="adminlogin">Login</a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="!isLoggedIn()">
               <a class="nav-link"  routerLink="adminregister">Register</a>
             </li>
             
-          <li class="nav-item">
-            <a class="nav-link"  routerLink="list-category">List category</a>
+          <li class="nav-item" *ngIf="isLoggedIn()">
+            <a class="nav-link"  routerLink="list-category">categories</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link"  routerLink="new-category">add category</a>
+          <li class="nav-item" *ngIf="isLoggedIn()">
+            <a class="nav-link"  routerLink="new-category">Add category</a>
          
            
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="isLoggedIn()">
               <a class="nav-link"  routerLink="addfund">Add fund Request</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="isLoggedIn()">
               <a class="nav-link"  routerLink="viewfund">View fund Request</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="isLoggedIn()">
               <a class="nav-link"  routerLink="admin/list">List admin</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="isLoggedIn()">
               <a class="nav-link"  routerLink="donor/list">List donor</a>
             </li>
+            <li class="nav-item" *ngIf="isLoggedIn()">
+              <a class="nav-link"  routerLink="addvideo">Add Video</a>
+            </li>
+            <li class="nav-item" *ngIf="isLoggedIn()">
+              <a class="nav-link"  routerLink="viewvideo">View Video List</a> 
+            </li>
+            <li class="nav-item" *ngIf="isLoggedIn()">
+              <a class="nav-link" (click)="logout()">Welcome {{authService.getUser().name}} !!!( Log out ) </a> 
+            </li>
+           
+          
            
  </ul>
  </div></nav>
