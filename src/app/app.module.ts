@@ -21,6 +21,7 @@ import { AdminregisterComponent } from './core/adminregister/adminregister.compo
 import { AdminregisterService } from './service/adminregister.service';
 import { AddVideoComponent } from './add-video/add-video.component';
 import { ListvideoComponent } from './listvideo/listvideo.component';
+import { AuthService } from './service/auth.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +48,8 @@ import { ListvideoComponent } from './listvideo/listvideo.component';
     FundserviceService,
     LoginserviceService,
     AddCategoryService,
-    AdminregisterService
+    AdminregisterService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
