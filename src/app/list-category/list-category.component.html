@@ -1,0 +1,23 @@
+<br>
+<br>
+<h2>Categories</h2>
+<table class="table">
+ <thead>
+     <tr>
+         <th>Category Id</th>
+         <th>Category Name</th>
+         <th>Created By</th>
+         <th>Date</th>
+         
+     </tr>
+ </thead>
+ <tbody>
+     <tr *ngFor="let data of data">
+         <td>{{data.id}}</td>
+         <td>{{data.categoryName}}</td>
+         <td>{{data.createdBy}}</td>
+         <td>{{data.created_date}}</td>
+         
+     </tr>
+ </tbody>
+</table>

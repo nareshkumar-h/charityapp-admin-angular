@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminserviceService } from 'src/app/service/adminservice.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-addfundrequest',
@@ -13,7 +14,7 @@ export class AddfundrequestComponent implements OnInit {
   requestedBy:any;
 
   constructor(
-    private admin:AdminserviceService
+    private admin:AdminserviceService,private router: Router
   ) { }
 
   ngOnInit() {
@@ -29,6 +30,7 @@ export class AddfundrequestComponent implements OnInit {
     console.log(formData);
     this.admin.addFundRequest(formData).subscribe( (res) => {
       console.log(JSON.stringify(res));
+      this.router.navigate(['viewfund']);
       alert('Fund Added successfully');
     }, (err) =>{
       console.log('error=>'+JSON.stringify(err));
