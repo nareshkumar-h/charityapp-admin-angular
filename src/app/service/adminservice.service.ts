@@ -10,7 +10,7 @@ export class AdminserviceService {
     private http:HttpClient
   ) { }
 
-  apiUrl='https://userapp-v1.herokuapp.com';
+  apiUrl='https://charity-requestor.herokuapp.com/';
 
   addFundRequest(formData:any):any
   {
