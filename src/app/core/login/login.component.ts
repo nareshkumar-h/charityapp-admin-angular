@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
       console.log(JSON.stringify(res));
        localStorage.setItem("LOGGED_IN_USER", JSON.stringify(res));
     //console.log(user);
-    this.router.navigate(['viewfund']);
+    this.router.navigate(['list-category']);
       alert('success');
     }, (err) =>{
       console.log('error=>'+JSON.stringify(err));
