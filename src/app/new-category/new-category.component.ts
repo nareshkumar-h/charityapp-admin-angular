@@ -28,6 +28,7 @@ this.donor.addcategory(formData).subscribe( (res) => {
   alert('success');
 }, (err) =>{
   console.log('error=>'+JSON.stringify(err));
+  alert(err.name);
 });
 }
 }

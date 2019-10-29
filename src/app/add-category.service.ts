@@ -15,10 +15,10 @@ export class AddCategoryService {
    addcategory(formData:any):any
    {
     console.log(formData);
-    return this.http.post(this.apiUrl+'Categories',formData);
+    return this.http.post(this.apiUrl+'categories',formData);
   }
   listcategory():any
 {
- return this.http.get(this.apiUrl+'categories/listCategory');
+ return this.http.get(this.apiUrl+'categories');
 }
 }
