@@ -4,6 +4,8 @@ import { AddfundrequestComponent } from './core/addfundrequest/addfundrequest.co
 import { ListfundrequestComponent } from './core/listfundrequest/listfundrequest.component';
 import { LoginComponent } from './core/login/login.component';
 import { AdminregisterComponent } from './core/adminregister/adminregister.component';
+import { AddVideoComponent } from './add-video/add-video.component';
+import { ListvideoComponent } from './listvideo/listvideo.component';
 
 
 const routes: Routes = [
@@ -22,6 +24,14 @@ const routes: Routes = [
   {
     path:'adminregister',
     component:AdminregisterComponent
+  },
+  {
+    path:'addvideo',
+    component:AddVideoComponent
+  },
+  {
+    path:'viewvideo',
+    component:ListvideoComponent
   }
 ];
 

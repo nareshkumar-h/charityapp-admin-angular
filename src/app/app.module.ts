@@ -16,6 +16,8 @@ import { FundserviceService } from './service/fundservice.service';
 import { LoginserviceService } from './service/loginservice.service';
 import { AdminregisterComponent } from './core/adminregister/adminregister.component';
 import { AdminregisterService } from './service/adminregister.service';
+import { AddVideoComponent } from './add-video/add-video.component';
+import { ListvideoComponent } from './listvideo/listvideo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,9 @@ import { AdminregisterService } from './service/adminregister.service';
     AddfundrequestComponent,
     ListfundrequestComponent,
     LoginComponent,
-    AdminregisterComponent
+    AdminregisterComponent,
+    AddVideoComponent,
+    ListvideoComponent
   ],
   imports: [
     BrowserModule,

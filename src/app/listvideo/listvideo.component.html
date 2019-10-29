@@ -1,0 +1,20 @@
+<h3>video list</h3>
+            <br/>
+<table class="table">
+    <thead>
+        <tr>
+        
+            <th>Video Id</th>
+            <th>Video title</th>
+            <th>Url</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of videoList">
+            <td>{{data.id}}</td>
+            <td>{{data.title}}</td>
+            <td>{{data.url}}</td>
+        </tr>
+    </tbody>
+</table>
