@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { AddfundrequestComponent } from './core/addfundrequest/addfundrequest.component';
 import { ListfundrequestComponent } from './core/listfundrequest/listfundrequest.component';
 import { LoginComponent } from './core/login/login.component';
+import { NewCategoryComponent } from './new-category/new-category.component';
+import { ListCategoryComponent } from './list-category/list-category.component';
 import { AdminregisterComponent } from './core/adminregister/adminregister.component';
 import { AddVideoComponent } from './add-video/add-video.component';
 import { ListvideoComponent } from './listvideo/listvideo.component';
@@ -18,8 +20,22 @@ const routes: Routes = [
     component:ListfundrequestComponent
   },
   {
+    path:'list-category',
+    component:ListCategoryComponent
+
+  },
+  {
     path:'adminlogin',
     component:LoginComponent
+  },
+  {
+    path:'addcategory',
+    component:NewCategoryComponent
+  },
+  
+  {
+    path:'new-category',
+    component:NewCategoryComponent,
   },
   {
     path:'adminregister',

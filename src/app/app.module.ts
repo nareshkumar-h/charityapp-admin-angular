@@ -14,6 +14,9 @@ import { FormsModule }  from '@angular/forms';
 import { LoginComponent } from './core/login/login.component';
 import { FundserviceService } from './service/fundservice.service';
 import { LoginserviceService } from './service/loginservice.service';
+import { NewCategoryComponent } from './new-category/new-category.component';
+import { ListCategoryComponent } from './list-category/list-category.component';
+import { AddCategoryService } from './add-category.service';
 import { AdminregisterComponent } from './core/adminregister/adminregister.component';
 import { AdminregisterService } from './service/adminregister.service';
 import { AddVideoComponent } from './add-video/add-video.component';
@@ -28,7 +31,10 @@ import { ListvideoComponent } from './listvideo/listvideo.component';
     LoginComponent,
     AdminregisterComponent,
     AddVideoComponent,
-    ListvideoComponent
+    ListvideoComponent,
+    NewCategoryComponent,
+    ListCategoryComponent,
+    AdminregisterComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +46,7 @@ import { ListvideoComponent } from './listvideo/listvideo.component';
     AdminserviceService,
     FundserviceService,
     LoginserviceService,
+    AddCategoryService,
     AdminregisterService
   ],
   bootstrap: [AppComponent]
