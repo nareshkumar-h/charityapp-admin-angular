@@ -21,4 +21,7 @@ export class AddCategoryService {
 {
  return this.http.get(this.apiUrl+'categories');
 }
+deleteCategory(id){
+  return this.http.delete(this.apiUrl+'categories/'+id);
+}
 }

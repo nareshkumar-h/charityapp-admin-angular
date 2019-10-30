@@ -22,6 +22,21 @@ export class ListCategoryComponent implements OnInit {
     }, (err) =>{
       console.log('error=>'+JSON.stringify(err));
     });
+  
+  }
+  deleteCategory(id){
+    alert(id);
+    this.donor.deleteCategory(id).subscribe( (res) => {
+      console.log(JSON.stringify(res));
+      
+      alert('success');
+      this.listcategory();
+    }, (err) =>{
+      alert(err.error.message);
+      console.log('error=>'+JSON.stringify(err));
+    });
+
+
   }
 
 }
