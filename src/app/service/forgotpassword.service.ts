@@ -10,6 +10,6 @@ export class ForgotpasswordService {
   ) { }
     forgotPassword(email:string):any
     {
-      return this.http.get(this.apiUrl+'/user/forgotpassword?email='+email);
+      return this.http.get(this.apiUrl+'/admin/forgotpassword?email='+email);
     }
 }
