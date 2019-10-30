@@ -29,7 +29,7 @@ export class AdminregisterComponent implements OnInit {
     };
     this.register.adminRegister(formData).subscribe( (res) => {
       console.log(JSON.stringify(res));
-       localStorage.setItem("LOGGED_IN_USER", JSON.stringify(res));
+      // localStorage.setItem("LOGGED_IN_USER", JSON.stringify(res));
     //console.log(user);
     this.router.navigate(['adminlogin']);
       alert('success');
