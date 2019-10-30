@@ -26,6 +26,7 @@ import { ListdonorService } from './service/listdonor.service';
 import { AddVideoComponent } from './add-video/add-video.component';
 import { ListvideoComponent } from './listvideo/listvideo.component';
 import { AuthService } from './service/auth.service';
+import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { AuthService } from './service/auth.service';
     ListCategoryComponent,
     AdminregisterComponent,
     ListadminComponent,
-    ListdonorComponent
+    ListdonorComponent,
+    ForgotpasswordComponent
   ],
   imports: [
     BrowserModule,
