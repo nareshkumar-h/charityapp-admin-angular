@@ -13,6 +13,8 @@ export class AddfundrequestComponent implements OnInit {
   categoryId:any;
   fundNeeded:any;
   requestedBy:any;
+  title:any;
+  description:any;
 
   constructor(
     private admin:AdminserviceService,private router: Router, private categoryService:AddCategoryService
@@ -28,7 +30,9 @@ export class AddfundrequestComponent implements OnInit {
     let formData :any= {
       'categoryId':this.categoryId,
       'fundNeeded':this.fundNeeded,
-      'requestedBy':user.id
+      'requestedBy':user.id,
+      'title':this.title,
+      'description':this.description
     };
     console.log(formData);
     this.admin.addFundRequest(formData).subscribe( (res) => {
