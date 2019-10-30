@@ -17,25 +17,28 @@
           <li class="nav-item" *ngIf="isLoggedIn()">
             <a class="nav-link"  routerLink="list-category">List Categories</a>
           </li>
-          <li class="nav-item" *ngIf="isLoggedIn()">
-            <a class="nav-link"  routerLink="viewfund">List fund Request</a>
-          </li>
+
           <li class="nav-item" *ngIf="isLoggedIn()">
             <a class="nav-link"  routerLink="new-category">Add category</a>
-         <li class="nav-item" *ngIf="isLoggedIn()">
+         
+           
+            <li class="nav-item" *ngIf="isLoggedIn()">
               <a class="nav-link"  routerLink="addfund">Add fund Request</a>
             </li>
             <li class="nav-item" *ngIf="isLoggedIn()">
-              <a class="nav-link"  routerLink="addvideo">Add Video</a>
-            </li>
-            <li class="nav-item" *ngIf="isLoggedIn()">
-              <a class="nav-link"  routerLink="viewvideo">List Video</a> 
+              <a class="nav-link"  routerLink="viewfund">List fund Request</a>
             </li>
             <li class="nav-item" *ngIf="isLoggedIn()">
               <a class="nav-link"  routerLink="admin/list">List admin</a>
             </li>
             <li class="nav-item" *ngIf="isLoggedIn()">
               <a class="nav-link"  routerLink="donor/list">List donor</a>
+            </li>
+            <li class="nav-item" *ngIf="isLoggedIn()">
+              <a class="nav-link"  routerLink="addvideo">Add Video</a>
+            </li>
+            <li class="nav-item" *ngIf="isLoggedIn()">
+              <a class="nav-link"  routerLink="viewvideo">View Video List</a> 
             </li>
             <li class="nav-item" *ngIf="isLoggedIn()">
               <a class="nav-link" (click)="logout()">Welcome {{authService.getUser().name}} !!!( Log out ) </a> 
