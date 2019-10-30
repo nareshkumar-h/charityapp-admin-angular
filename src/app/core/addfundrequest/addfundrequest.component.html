@@ -21,6 +21,14 @@
                  <label for="inputPassword">Fund Needed</label>
                   <input type="number" [(ngModel)]= "fundNeeded" id="fundNeeded" class="form-control" placeholder="Enter fund Needed" required>
                 </div>
+                <div class="form-label-group">
+                  <label for="inputTitle">Enter title </label>
+                   <input type="text" [(ngModel)]= "title" id="title" class="form-control" placeholder="Enter title" required>
+                 </div>
+                 <div class="form-label-group">
+                  <label for="inputTitle">Enter description</label>
+                   <input type="text" [(ngModel)]= "description" id="description" class="form-control" placeholder="Enter description" required>
+                 </div>
                    <br/>
                    <br/>
                 <button (click)="addrequest()"  type="submit" class="btn btn-success">Add Fund</button>
