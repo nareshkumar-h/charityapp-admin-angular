@@ -18,9 +18,10 @@ export class ForgotpasswordComponent implements OnInit {
 
   sendMail()
   {
-    this.isSendMail = true;
+    
     this.forgotPasswordService.forgotPassword(this.email).subscribe( (res) => {
       console.log("Mail send successfulley!");
+      this.isSendMail = true;
     }, (err) =>{
       console.log("Mail not send");
     });
