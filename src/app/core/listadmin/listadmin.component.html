@@ -8,12 +8,14 @@
                         <table class="table">
                                 <thead>
                                     <tr>
+                                        <th>S.No</th>
                                         <th>Name</th>
                                         <th>Email</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr *ngFor="let data of users">
+                                    <tr *ngFor="let data of users;let row = index; ">
+                                        <td>{{row + 1}}</td>
                                         <td>{{data.name}}</td>
                                         <td>{{data.email}}</td>
                                     </tr>
