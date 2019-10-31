@@ -1,6 +1,6 @@
 
             <div class="row justify-content-center">
-                <div class="col-md-5">
+                <div class="col-md-8">
                     <div class="card border-secondary">
                       <div class="card-body">
                         <i class="card-img-top ion-ios-paper-outline" style="font-size: 70px;background-color: rgb(248, 248, 248);padding: 0 10px;"></i>
@@ -10,21 +10,26 @@
     <thead>
         <tr>
             
-            <th>S.No</th>
-            <th>Category Id</th>
+          <!--  <th>S.No</th>-->
+            <th>Category Name</th>
             <th>Fund Needed</th>
+            <th>Title</th>
+            <th>Description</th>
             <th>Requested By</th>
             <th>Date</th>
+            <th>Video</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let data of fundList">
-            <td>{{data.id}}</td>
-            <td>{{data.categoryId}}</td>
+          <!--  <td>{{data.id}}</td>-->
+            <td>{{data.categoryName}}</td>
             <td>{{data.fundNeeded}}</td>
-            <!--Temporarily used name for requested by-->
-            <td>{{data.requestedBy}}</td>
+            <td>{{data.title}}</td>
+            <td>{{data.description}}</td>
+            <td>{{data.requestedByName}}</td>
             <td>{{data.createdDate}}</td>
+            <td><a class="btn-btn-primary" routerLink="{{data.categoryName}}">Assign Videos</a></td>
         </tr>
     </tbody>
 </table>
