@@ -27,7 +27,6 @@ import { AddVideoComponent } from './add-video/add-video.component';
 import { ListvideoComponent } from './listvideo/listvideo.component';
 import { AuthService } from './service/auth.service';
 import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.component';
-import { AssignvideoComponent } from './core/assignvideo/assignvideo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,8 +43,7 @@ import { AssignvideoComponent } from './core/assignvideo/assignvideo.component';
     AdminregisterComponent,
     ListadminComponent,
     ListdonorComponent,
-    ForgotpasswordComponent,
-    AssignvideoComponent
+    ForgotpasswordComponent
   ],
   imports: [
     BrowserModule,

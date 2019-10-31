@@ -10,7 +10,8 @@ export class AddCategoryService {
     private http:HttpClient
     ) { }
   // apiUrl='http://localhost:9002/';
-  apiUrl = "https://charity-category.herokuapp.com/";
+  //apiUrl = "https://charity-category.herokuapp.com/";
+  apiUrl:string = "https://peaceful-scrubland-89780.herokuapp.com/categoryapp";
    
    addcategory(formData:any):any
    {
@@ -20,10 +21,6 @@ export class AddCategoryService {
   listcategory():any
 {
  return this.http.get(this.apiUrl+'categories');
-}
-
-update(id,formData){
-  return this.http.put(this.apiUrl+'categories/'+id, formData);
 }
 deleteCategory(id){
   return this.http.delete(this.apiUrl+'categories/'+id);

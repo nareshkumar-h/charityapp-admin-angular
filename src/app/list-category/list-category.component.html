@@ -21,11 +21,11 @@
      <tr *ngFor="let data of data">
          <td>{{data.id}}</td>
          <td>{{data.categoryName}}</td>
-         <td>{{data.createdByName}}</td>
+         <td>{{data.createdBy}}</td>
          <td>{{data.createdDate}}</td>
          <td><span *ngIf="data.active">Active</span><span *ngIf="!data.active">Inactive</span></td>
-         <td><a class="btn btn-success" (click)="updateStatus(data.id,true)">Enable</a></td>
-         <td><a class="btn btn-danger" (click)="updateStatus(data.id,false)">Disable</a></td>
+         <td><a class="btn btn-danger" (click)="deleteCategory(data.id)">Delete</a></td>
+         
      </tr>
  </tbody>
 </table>
