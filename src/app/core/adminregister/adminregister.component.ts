@@ -32,9 +32,10 @@ export class AdminregisterComponent implements OnInit {
       // localStorage.setItem("LOGGED_IN_USER", JSON.stringify(res));
     //console.log(user);
     this.router.navigate(['adminlogin']);
-      alert('success');
+      alert('Registration success,Please login to continue');
     }, (err) =>{
       console.log('error=>'+JSON.stringify(err));
+      alert(err.error.message);
     });
    
   }
