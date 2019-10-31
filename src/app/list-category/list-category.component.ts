@@ -24,6 +24,25 @@ export class ListCategoryComponent implements OnInit {
     });
   
   }
+
+  updateStatus(id, status) {
+    let formData = { 
+      "id" : id,
+      "active" : status
+    }
+
+    this.donor.update(id,formData).subscribe( (res) => {
+      console.log(JSON.stringify(res));
+      
+      alert('success');
+      this.listcategory();
+    }, (err) =>{
+      alert(err.error.message);
+      console.log('error=>'+JSON.stringify(err));
+    });
+
+
+  }
   deleteCategory(id){
     alert(id);
     this.donor.deleteCategory(id).subscribe( (res) => {
