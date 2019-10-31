@@ -14,11 +14,11 @@ export class VideoServiceService {
   videoContent(formData:any):any
   {
     console.log(formData);
-    return this.http.post(this.apiUrl+'videocontent',formData);
+    return this.http.post(this.apiUrl+'videos',formData);
   }
   viewViedoList():any
   {
-    return this.http.get(this.apiUrl+'videocontent/contentlist');
+    return this.http.get(this.apiUrl+'videos');
   }
   
 }

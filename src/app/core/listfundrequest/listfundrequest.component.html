@@ -10,8 +10,8 @@
     <thead>
         <tr>
             
-            <th>S.No</th>
-            <th>Category Id</th>
+          <!--  <th>S.No</th>-->
+            <th>Category Name</th>
             <th>Fund Needed</th>
             <th>Title</th>
             <th>Description</th>
@@ -21,13 +21,13 @@
     </thead>
     <tbody>
         <tr *ngFor="let data of fundList">
-            <td>{{data.id}}</td>
-            <td>{{data.categoryId}}</td>
+          <!--  <td>{{data.id}}</td>-->
+            <td>{{data.categoryName}}</td>
             <td>{{data.fundNeeded}}</td>
             <td>{{data.title}}</td>
             <td>{{data.description}}</td>
             <!--Temporarily used name for requested by-->
-            <td>{{data.requestedBy}}</td>
+            <td>{{data.requestedByName}}</td>
             <td>{{data.createdDate}}</td>
         </tr>
     </tbody>
