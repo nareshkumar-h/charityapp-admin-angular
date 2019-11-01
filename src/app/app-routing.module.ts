@@ -33,8 +33,7 @@ const routes: Routes = [
   },
   {
     path:'adminlogin',
-    component:LoginComponent,
-    canActivate: [AuthGuard] 
+    component:LoginComponent
   },
   {
     path:'addcategory',
@@ -49,8 +48,7 @@ const routes: Routes = [
   },
   {
     path:'adminregister',
-    component:AdminregisterComponent,
-    canActivate: [AuthGuard] 
+    component:AdminregisterComponent 
   },
   {
     path:"admin/list",
