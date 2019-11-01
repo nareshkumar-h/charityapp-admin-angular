@@ -17,7 +17,11 @@
             <th>Description</th>
             <th>Requested By</th>
             <th>Date</th>
+<<<<<<< HEAD
             <th>assign video</th>
+=======
+            <th>Video</th>
+>>>>>>> c9aa97ec02846bab3b4e44372507025d342d66be
            
         </tr>
     </thead>
@@ -29,7 +33,11 @@
             <td>{{data.fundNeeded}}</td>
             <td>{{data.title}}</td>
             <td>{{data.description}}</td>
-            <td>{{data.requestedByName}}</td>
+            <td>{{data.requestedByName}}
+
+                <ngx-avatar [round]="true" size="25" gravatarId="{{data.requestedByEmail}}">
+                </ngx-avatar>
+            </td>
             <td>{{data.createdDate}}</td>
             <td><a class="btn-btn-primary" routerLink="../assignvideo/{{data.id}}">Assign Videos</a></td>
             

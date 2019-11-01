@@ -27,6 +27,7 @@
             <li class="nav-item" *ngIf="isLoggedIn()">
               <a class="nav-link"  routerLink="addfund">Add fund Request</a>
             </li>
+            
             <li class="nav-item" *ngIf="isLoggedIn()">
               <a class="nav-link"  routerLink="viewfund">List fund Request</a>
             </li>
@@ -42,10 +43,16 @@
             <li class="nav-item" *ngIf="isLoggedIn()">
               <a class="nav-link"  routerLink="viewvideo">View Video List</a> 
             </li>
+          
             <li class="nav-item" *ngIf="isLoggedIn()">
-              <a class="nav-link" (click)="logout()">Welcome {{authService.getUser().name}} !!!( Log out ) </a> 
+              <a class="nav-link" >{{authService.getUser().name}}<ngx-avatar [round]="true" size="25" gravatarId="{{authService.getUser().email}}">
+</ngx-avatar></a> 
             </li>
-           
+              <li class="nav-item" *ngIf="isLoggedIn()">
+                <a class="nav-link"  (click)="logout()">Log Out</a>
+              </li>
+            
+            
           
            
  </ul>
