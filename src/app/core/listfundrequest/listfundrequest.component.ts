@@ -12,7 +12,7 @@ export class ListfundrequestComponent implements OnInit {
   adminstatus:boolean=true;
 
   constructor(
-    private fund:FundserviceService
+    private fund:FundserviceService,
   ) { }
 
   ngOnInit() {
