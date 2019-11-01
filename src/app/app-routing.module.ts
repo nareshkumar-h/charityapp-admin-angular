@@ -11,58 +11,71 @@ import { ListdonorComponent } from './core/listdonor/listdonor.component';
 import { AddVideoComponent } from './add-video/add-video.component';
 import { ListvideoComponent } from './listvideo/listvideo.component';
 import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.component';
+import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [
   {
     path:'addfund',
-    component:AddfundrequestComponent
+    component:AddfundrequestComponent,
+    canActivate: [AuthGuard] 
   },
   {
     path:'viewfund',
-    component:ListfundrequestComponent
+    component:ListfundrequestComponent,
+    canActivate: [AuthGuard] 
   },
   {
     path:'list-category',
-    component:ListCategoryComponent
+    component:ListCategoryComponent,
+    canActivate: [AuthGuard] 
 
   },
   {
     path:'adminlogin',
-    component:LoginComponent
+    component:LoginComponent,
+    canActivate: [AuthGuard] 
   },
   {
     path:'addcategory',
-    component:NewCategoryComponent
+    component:NewCategoryComponent,
+    canActivate: [AuthGuard] 
   },
   
   {
     path:'new-category',
     component:NewCategoryComponent,
+    canActivate: [AuthGuard] 
   },
   {
     path:'adminregister',
-    component:AdminregisterComponent
+    component:AdminregisterComponent,
+    canActivate: [AuthGuard] 
   },
   {
     path:"admin/list",
-    component:ListadminComponent
+    component:ListadminComponent,
+    canActivate: [AuthGuard] 
   },
   {
     path:"donor/list",
-    component:ListdonorComponent
+    component:ListdonorComponent,
+    canActivate: [AuthGuard] 
   },
   {
     path:'addvideo',
-    component:AddVideoComponent
+    component:AddVideoComponent,
+    canActivate: [AuthGuard] 
   },
   {
     path:'viewvideo',
-    component:ListvideoComponent
+    component:ListvideoComponent,
+    canActivate: [AuthGuard] 
   },
   {
     path:'forgotpassword',
-    component:ForgotpasswordComponent
+    component:ForgotpasswordComponent,
+    canActivate: [AuthGuard] 
   }
 ];
 
