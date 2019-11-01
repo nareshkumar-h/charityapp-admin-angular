@@ -11,6 +11,7 @@ import { ListdonorComponent } from './core/listdonor/listdonor.component';
 import { AddVideoComponent } from './add-video/add-video.component';
 import { ListvideoComponent } from './listvideo/listvideo.component';
 import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.component';
+import { AssignvideoComponent } from './core/assignvideo/assignvideo.component';
 import { AuthGuard } from './auth.guard';
 
 
@@ -33,8 +34,7 @@ const routes: Routes = [
   },
   {
     path:'adminlogin',
-    component:LoginComponent,
-    canActivate: [AuthGuard] 
+    component:LoginComponent
   },
   {
     path:'addcategory',
@@ -49,8 +49,7 @@ const routes: Routes = [
   },
   {
     path:'adminregister',
-    component:AdminregisterComponent,
-    canActivate: [AuthGuard] 
+    component:AdminregisterComponent 
   },
   {
     path:"admin/list",
@@ -75,8 +74,14 @@ const routes: Routes = [
   {
     path:'forgotpassword',
     component:ForgotpasswordComponent,
+    canActivate:[AuthGuard]
+  },
+  {
+    path:'assignvideo/:requestId',
+    component:AssignvideoComponent,
     canActivate: [AuthGuard] 
   }
+
 ];
 
 @NgModule({
