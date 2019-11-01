@@ -26,8 +26,8 @@ export class NewCategoryComponent implements OnInit {
 };
 this.donor.addcategory(formData).subscribe( (res) => {
   console.log(JSON.stringify(res));
-  this.router.navigate(['new-category']);
-  alert('success');
+  this.router.navigate(['addcategory']);
+  alert('Category added successfully');
 }, (err) =>{
   console.log('error=>'+JSON.stringify(err));
   alert(err.name);
