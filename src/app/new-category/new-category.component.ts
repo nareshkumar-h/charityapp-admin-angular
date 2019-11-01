@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AddCategoryService } from '../add-category.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-category',
@@ -10,7 +11,7 @@ export class NewCategoryComponent implements OnInit {
 
   createdBy:any;
   categoryName:any;
-  constructor(private donor:AddCategoryService) 
+  constructor(private donor:AddCategoryService,private router: Router) 
   { }
   ngOnInit() {
   }
@@ -25,6 +26,7 @@ export class NewCategoryComponent implements OnInit {
 };
 this.donor.addcategory(formData).subscribe( (res) => {
   console.log(JSON.stringify(res));
+  this.router.navigate(['new-category']);
   alert('success');
 }, (err) =>{
   console.log('error=>'+JSON.stringify(err));
