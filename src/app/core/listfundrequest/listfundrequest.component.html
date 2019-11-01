@@ -10,26 +10,31 @@
     <thead>
         <tr>
             
-          <!--  <th>S.No</th>-->
+            <th>S.No</th>
             <th>Category Name</th>
-            <th>Fund Needed</th>
+            <th>Fund Needed(Rs)</th>
             <th>Title</th>
             <th>Description</th>
             <th>Requested By</th>
             <th>Date</th>
-            <th>Video</th>
+           
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let data of fundList">
+        <tr *ngFor="let data of fundList;let i= index">
           <!--  <td>{{data.id}}</td>-->
+          <td>{{i + 1}}</td>
             <td>{{data.categoryName}}</td>
             <td>{{data.fundNeeded}}</td>
             <td>{{data.title}}</td>
             <td>{{data.description}}</td>
             <td>{{data.requestedByName}}</td>
             <td>{{data.createdDate}}</td>
+<<<<<<< HEAD
             <td><a class="btn-btn-primary" routerLink="../assignvideo/{{data.id}}">Assign Videos</a></td>
+=======
+            
+>>>>>>> a9b33fd5526579b5544f942f82d78a36ce02e8bd
         </tr>
     </tbody>
 </table>

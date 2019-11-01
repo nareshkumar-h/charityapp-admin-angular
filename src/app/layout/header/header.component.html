@@ -14,14 +14,16 @@
               <a class="nav-link"  routerLink="adminregister">Register</a>
             </li>
             
+            <li class="nav-item" *ngIf="isLoggedIn()">
+              <a class="nav-link"  routerLink="new-category">Add category</a>
+            </li>
+             
+
           <li class="nav-item" *ngIf="isLoggedIn()">
             <a class="nav-link"  routerLink="list-category">List Categories</a>
           </li>
 
-          <li class="nav-item" *ngIf="isLoggedIn()">
-            <a class="nav-link"  routerLink="new-category">Add category</a>
-         
-           
+          
             <li class="nav-item" *ngIf="isLoggedIn()">
               <a class="nav-link"  routerLink="addfund">Add fund Request</a>
             </li>

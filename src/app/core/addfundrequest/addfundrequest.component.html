@@ -8,9 +8,8 @@
               <h5 class="card-title text-center">Add Fund Request</h5>
               
                 <div class="form-label-group">
-                 <label for="inputEmail">Category Id</label>
-                 <!-- <input type="text" [(ngModel)]= "categoryId" id="categoryId" class="form-control" placeholder="Enter Category Id" required autofocus>
-                  -->
+                 <label for="inputEmail">Category</label>
+
                   <select name="Category Id"  [(ngModel)]="categoryId"id="categoryId"class="form-control">
                       
                     <option *ngFor="let data of categories" value="{{data.id }}">{{data.categoryName}}</option>
@@ -18,7 +17,7 @@
                 </select>
                 </div>
                 <div class="form-label-group">
-                 <label for="inputPassword">Fund Needed</label>
+                 <label for="inputPassword">Fund Needed(Rs)</label>
                   <input type="number" [(ngModel)]= "fundNeeded" id="fundNeeded" class="form-control" placeholder="Enter fund Needed" required>
                 </div>
                 <div class="form-label-group">
@@ -31,8 +30,8 @@
                  </div>
                    <br/>
                    <br/>
-                <button (click)="addrequest()"  type="submit" class="btn btn-success">Add Fund</button>&nbsp;
-                <button type="reset" class="btn btn-danger">Reset</button>
+                <button (click)="addrequest()"  type="submit" class="btn btn-success">Add Fund</button>
+                <button style="margin-left: 5px;"type="reset" class="btn btn-danger">Reset</button>
             </div>
           </div>
         </div>

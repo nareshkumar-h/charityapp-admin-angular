@@ -11,21 +11,28 @@ import { ListdonorComponent } from './core/listdonor/listdonor.component';
 import { AddVideoComponent } from './add-video/add-video.component';
 import { ListvideoComponent } from './listvideo/listvideo.component';
 import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.component';
+<<<<<<< HEAD
 import { AssignvideoComponent } from './core/assignvideo/assignvideo.component';
+=======
+import { AuthGuard } from './auth.guard';
+>>>>>>> a9b33fd5526579b5544f942f82d78a36ce02e8bd
 
 
 const routes: Routes = [
   {
     path:'addfund',
-    component:AddfundrequestComponent
+    component:AddfundrequestComponent,
+    canActivate: [AuthGuard] 
   },
   {
     path:'viewfund',
-    component:ListfundrequestComponent
+    component:ListfundrequestComponent,
+    canActivate: [AuthGuard] 
   },
   {
     path:'list-category',
-    component:ListCategoryComponent
+    component:ListCategoryComponent,
+    canActivate: [AuthGuard] 
 
   },
   {
@@ -34,40 +41,51 @@ const routes: Routes = [
   },
   {
     path:'addcategory',
-    component:NewCategoryComponent
+    component:NewCategoryComponent,
+    canActivate: [AuthGuard] 
   },
   
   {
     path:'new-category',
     component:NewCategoryComponent,
+    canActivate: [AuthGuard] 
   },
   {
     path:'adminregister',
-    component:AdminregisterComponent
+    component:AdminregisterComponent 
   },
   {
     path:"admin/list",
-    component:ListadminComponent
+    component:ListadminComponent,
+    canActivate: [AuthGuard] 
   },
   {
     path:"donor/list",
-    component:ListdonorComponent
+    component:ListdonorComponent,
+    canActivate: [AuthGuard] 
   },
   {
     path:'addvideo',
-    component:AddVideoComponent
+    component:AddVideoComponent,
+    canActivate: [AuthGuard] 
   },
   {
     path:'viewvideo',
-    component:ListvideoComponent
+    component:ListvideoComponent,
+    canActivate: [AuthGuard] 
   },
   {
     path:'forgotpassword',
+<<<<<<< HEAD
     component:ForgotpasswordComponent
   },
   {
     path:'assignvideo/:requestId',
     component:AssignvideoComponent
+=======
+    component:ForgotpasswordComponent,
+    canActivate: [AuthGuard] 
+>>>>>>> a9b33fd5526579b5544f942f82d78a36ce02e8bd
   }
 
 ];

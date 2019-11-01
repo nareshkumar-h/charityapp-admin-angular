@@ -16,6 +16,8 @@ export class AddfundrequestComponent implements OnInit {
   title:any;
   description:any;
 
+  requestStatus:boolean = false;
+
   constructor(
     private admin:AdminserviceService,private router: Router, private categoryService:AddCategoryService
    
@@ -39,6 +41,7 @@ export class AddfundrequestComponent implements OnInit {
       console.log(JSON.stringify(res));
       this.router.navigate(['viewfund']);
       alert('Fund Added successfully');
+      this.requestStatus = true;
     }, (err) =>{
       console.log('error=>'+JSON.stringify(err));
       alert(err.error.message);
