@@ -28,6 +28,7 @@ import { ListvideoComponent } from './listvideo/listvideo.component';
 import { AuthService } from './service/auth.service';
 import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.component';
 import { AssignvideoComponent } from './core/assignvideo/assignvideo.component';
+import { AvatarModule } from 'ngx-avatar'
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,8 @@ import { AssignvideoComponent } from './core/assignvideo/assignvideo.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AvatarModule
   ],
   providers: [
     AdminserviceService,

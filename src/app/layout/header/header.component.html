@@ -45,7 +45,12 @@
             <li class="nav-item" *ngIf="isLoggedIn()">
               <a class="nav-link" (click)="logout()">Welcome {{authService.getUser().name}} !!!( Log out ) </a> 
             </li>
-           
+            <li class="">
+            <ngx-avatar name="{{authService.getUser().name}}" gravatarId="{{authService.getUser().email}}">
+
+            </ngx-avatar>
+
+            </li>
           
            
  </ul>
