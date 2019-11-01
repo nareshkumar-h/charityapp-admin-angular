@@ -12,7 +12,6 @@
          <th>Category Name</th>
          <th>Created By</th>
          <th>Date</th>
-         <th>Status</th>
          <th>Action</th>
          
      </tr>
@@ -23,10 +22,11 @@
          <td>{{data.categoryName}}</td>
          <td>{{data.createdByName}}</td>
          <td>{{data.createdDate}}</td>
-         <td>{{data.active}}</td>
+         <!--<td>{{data.active}}</td>-->
          <!--<td><span *ngIf="data.active">Active</span><span *ngIf="!data.active">Inactive</span></td>-->
-         <td><a class="btn btn-success" (click)="deleteCategory(data.id,true)">Enable</a></td>
-         <td><a class="btn btn-danger" (click)="updateStatus(data.id,false)">Disable</a></td>
+
+         <td><span *ngIf="!data.active"><a class="btn btn-success" (click)="deleteCategory(data.id,true)">Enable</a></span>
+         <span *ngIf="data.active"><a class="btn btn-danger" (click)="updateStatus(data.id,false)">Disable</a></span></td>
      </tr>
  </tbody>
 </table>
