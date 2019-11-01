@@ -10,7 +10,7 @@
     <thead>
         <tr>
             
-          <!--  <th>S.No</th>-->
+            <th>S.No</th>
             <th>Category Name</th>
             <th>Fund Needed(Rs)</th>
             <th>Title</th>
@@ -23,6 +23,7 @@
     <tbody>
         <tr *ngFor="let data of fundList">
           <!--  <td>{{data.id}}</td>-->
+          <td>{{ $index + 1 | number }}</td>
             <td>{{data.categoryName}}</td>
             <td>{{data.fundNeeded}}</td>
             <td>{{data.title}}</td>
