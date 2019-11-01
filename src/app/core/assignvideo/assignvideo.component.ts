@@ -11,12 +11,12 @@ import { VideoServiceService } from 'src/app/video-service.service';
 })
 export class AssignvideoComponent implements OnInit {
   videoId:number;
-  requestId:number;
+  requestedId:number;
   constructor(
     private requestorvideo:RequestorserviceService,private router: Router,private video:VideoServiceService, private route:ActivatedRoute) 
     { this.route.params.subscribe ( params => {
       console.log(params['requestId']);
-      this.requestId = +params['requestId'];
+      this.requestedId = +params['requestId'];
     });
    }
 
@@ -38,7 +38,7 @@ export class AssignvideoComponent implements OnInit {
     let formData :any= {
       'videoId':this.videoId,
       'createdBy':user.id,
-      'requestId': this.requestId
+      'requestedId': this.requestedId
     
     };
     console.log(formData);

@@ -11,12 +11,8 @@ import { ListdonorComponent } from './core/listdonor/listdonor.component';
 import { AddVideoComponent } from './add-video/add-video.component';
 import { ListvideoComponent } from './listvideo/listvideo.component';
 import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.component';
-<<<<<<< HEAD
-import { AssignvideoComponent } from './core/assignvideo/assignvideo.component';
-=======
 import { AuthGuard } from './auth.guard';
->>>>>>> a9b33fd5526579b5544f942f82d78a36ce02e8bd
-
+import { AssignvideoComponent } from './core/assignvideo/assignvideo.component';
 
 const routes: Routes = [
   {
@@ -76,16 +72,13 @@ const routes: Routes = [
   },
   {
     path:'forgotpassword',
-<<<<<<< HEAD
     component:ForgotpasswordComponent
   },
   {
     path:'assignvideo/:requestId',
     component:AssignvideoComponent
-=======
-    component:ForgotpasswordComponent,
-    canActivate: [AuthGuard] 
->>>>>>> a9b33fd5526579b5544f942f82d78a36ce02e8bd
+    
+  
   }
 
 ];
