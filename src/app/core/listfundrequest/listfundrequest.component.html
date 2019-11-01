@@ -29,7 +29,11 @@
             <td>{{data.fundNeeded}}</td>
             <td>{{data.title}}</td>
             <td>{{data.description}}</td>
-            <td>{{data.requestedByName}}</td>
+            <td>{{data.requestedByName}}
+
+                <ngx-avatar [round]="true" size="25" gravatarId="{{data.requestedByEmail}}">
+                </ngx-avatar>
+            </td>
             <td>{{data.createdDate}}</td>
             <td><a class="btn-btn-primary" routerLink="../assignvideo/{{data.id}}">Assign Videos</a></td>
             
