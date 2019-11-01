@@ -21,9 +21,9 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let data of fundList">
+        <tr *ngFor="let data of fundList;let i= index">
           <!--  <td>{{data.id}}</td>-->
-          <td>{{ $index + 1 | number }}</td>
+          <td>{{i + 1}}</td>
             <td>{{data.categoryName}}</td>
             <td>{{data.fundNeeded}}</td>
             <td>{{data.title}}</td>
