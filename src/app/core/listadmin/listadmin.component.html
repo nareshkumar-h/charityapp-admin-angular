@@ -16,7 +16,7 @@
                                 <tbody>
                                     <tr *ngFor="let data of users;let row = index; ">
                                         <td>{{row + 1}}</td>
-                                        <td>{{data.name}}<ngx-avatar [round]="true" size="50" gravatarId="{{data.email}}d=https%3A%2F%2Fexample.com%2Fimages%2Favatar.jpg">
+                                        <td>{{data.name}}<ngx-avatar [round]="true" size="50" gravatarId="{{data.email}}">
                                         </ngx-avatar></td>
                                         <td>{{data.email}}</td>
                                     </tr>
