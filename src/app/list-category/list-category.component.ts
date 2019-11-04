@@ -44,7 +44,7 @@ export class ListCategoryComponent implements OnInit {
 
   }
   deleteCategory(id){
-    alert(id);
+   
     this.donor.deleteCategory(id).subscribe( (res) => {
       console.log(JSON.stringify(res));
       

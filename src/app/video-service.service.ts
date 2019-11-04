@@ -10,7 +10,7 @@ export class VideoServiceService {
     private http:HttpClient
   ) { }
   apiUrl='https://charityapp-content-ms.herokuapp.com/';
-  //apiUrl='https://peaceful-scrubland-89780.herokuapp.com/contentapp/';
+  //apiUrl='https://peaceful-scrubland-89780.herokuapp.com/contentapp/';  
   //apiUrl = 'http://localhost:9007/';
   videoContent(formData:any):any
   {

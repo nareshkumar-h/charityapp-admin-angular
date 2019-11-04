@@ -21,7 +21,9 @@
          <!--<td>{{data.id}}</td>-->
          <td>{{i + 1}}</td>
          <td>{{data.categoryName}}</td>
-         <td>{{data.createdByName}}</td>
+         <td>{{data.createdByName}}
+         <ngx-avatar [round]="true" size="50" gravatarId="{{data.requestedByEmail}}">
+        </ngx-avatar></td>
          <td>{{data.createdDate}}</td>
          <!--<td>{{data.active}}</td>-->
          <!--<td><span *ngIf="data.active">Active</span><span *ngIf="!data.active">Inactive</span></td>-->
