@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ForgotpasswordService {
   apiUrl:string = "https://userapp-v1.herokuapp.com";
+  //apiUrl:string = "https://peaceful-scrubland-89780.herokuapp.com/userapp";
   constructor(
     private http:HttpClient
   ) { }
