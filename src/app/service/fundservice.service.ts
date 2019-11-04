@@ -11,7 +11,7 @@ export class FundserviceService {
   ) { }
   //apiUrl:string = 'http://localhost:9003/';
  // apiUrl='https://charity-requestor.herokuapp.com/';
-  apiUrl='https://peaceful-scrubland-89780.herokuapp.com/requestapp/';
+  apiUrl='https://charityapp-api-gateway.herokuapp.com/requestapp/';
 
   viewFundRequest():any
   {

@@ -11,7 +11,7 @@ export class ListdonorService {
   ) { }
 
   //apiUrl:string = "https://userapp-v1.herokuapp.com";
-  apiUrl:string = "https://peaceful-scrubland-89780.herokuapp.com/userapp";
+  apiUrl:string = "https://charityapp-api-gateway.herokuapp.com/userapp";
 
   listDonor():any
   {
