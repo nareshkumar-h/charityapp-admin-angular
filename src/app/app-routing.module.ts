@@ -13,6 +13,8 @@ import { ListvideoComponent } from './listvideo/listvideo.component';
 import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.component';
 import { AuthGuard } from './auth.guard';
 import { AssignvideoComponent } from './core/assignvideo/assignvideo.component';
+import { HomeComponent } from './core/home/home.component';
+
 
 const routes: Routes = [
   {
@@ -76,9 +78,15 @@ const routes: Routes = [
   },
   {
     path:'assignvideo/:requestId',
-    component:AssignvideoComponent
+    component:AssignvideoComponent,
+    canActivate: [AuthGuard] 
     
   
+  },
+  {
+    path:'home',
+    component:HomeComponent,
+    canActivate:[AuthGuard]
   }
 
 ];

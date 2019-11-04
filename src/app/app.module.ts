@@ -28,7 +28,8 @@ import { ListvideoComponent } from './listvideo/listvideo.component';
 import { AuthService } from './service/auth.service';
 import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.component';
 import { AssignvideoComponent } from './core/assignvideo/assignvideo.component';
-import { AvatarModule } from 'ngx-avatar'
+import { AvatarModule } from 'ngx-avatar';
+import { HomeComponent } from './core/home/home.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +47,8 @@ import { AvatarModule } from 'ngx-avatar'
     ListadminComponent,
     ListdonorComponent,
     ForgotpasswordComponent,
-    AssignvideoComponent
+    AssignvideoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

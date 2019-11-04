@@ -45,9 +45,13 @@
             </li>
           
             <li class="nav-item" *ngIf="isLoggedIn()">
-              <a class="nav-link" >{{authService.getUser().name}}<ngx-avatar [round]="true" size="50" gravatarId="{{authService.getUser().email}}">
-</ngx-avatar></a> 
-            </li>
+              <a class="nav-link" >{{authService.getUser().name}}<ngx-avatar [round]="true" size="50"name="{{authService.getUser().name}}" gravatarId="{{authService.getUser().email}}"></ngx-avatar></a>            </li>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
               <li class="nav-item" *ngIf="isLoggedIn()">
                 <a class="nav-link"  (click)="logout()">Log Out</a>
               </li>
