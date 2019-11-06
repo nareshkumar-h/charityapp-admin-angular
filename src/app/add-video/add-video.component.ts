@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { VideoServiceService } from '../video-service.service';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-add-video',
@@ -11,10 +12,16 @@ export class AddVideoComponent implements OnInit {
   videoName:any;
   url:any;
   constructor(
-    private video:VideoServiceService
+    private video:VideoServiceService,private _snackBar:MatSnackBar
   ) { }
 
   ngOnInit() {
+  }
+  openSnackBar(message, action) {
+    this._snackBar.open(message, action, {
+      duration: 2000,
+    
+    });
   }
   addvideo()
   {
@@ -27,10 +34,16 @@ export class AddVideoComponent implements OnInit {
     console.log(formData);
     this.video. videoContent(formData).subscribe( (res) => {
       console.log(JSON.stringify(res));
-      alert('Video Added successfully');
+     // alert('Video Added successfully');
+      let message:string = 'Video Added successfully';
+      let action:string  = 'close';
+      this.openSnackBar(message,action);
     }, (err) =>{
       console.log('error=>'+JSON.stringify(err));
-      alert(err.error.message);
+      //alert(err.error.message);
+      let message:string = err.error.message;
+      let action:string  = 'close';
+      this.openSnackBar(message,action);
     });
   }
 

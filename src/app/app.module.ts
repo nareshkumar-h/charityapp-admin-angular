@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
@@ -29,7 +29,8 @@ import { AuthService } from './service/auth.service';
 import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.component';
 import { AssignvideoComponent } from './core/assignvideo/assignvideo.component';
 import { AvatarModule } from 'ngx-avatar';
-import { HomeComponent } from './core/home/home.component'
+import { HomeComponent } from './core/home/home.component';
+import { MatSnackBarModule } from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +56,9 @@ import { HomeComponent } from './core/home/home.component'
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    AvatarModule
+    AvatarModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule
   ],
   providers: [
     AdminserviceService,

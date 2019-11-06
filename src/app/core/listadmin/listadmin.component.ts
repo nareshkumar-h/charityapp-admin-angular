@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ListadminService } from 'src/app/service/listadmin.service';
+import { MatSnackBar } from '@angular/material';
 @Component({
   selector: 'app-listadmin',
   templateUrl: './listadmin.component.html',
@@ -8,13 +9,19 @@ import { ListadminService } from 'src/app/service/listadmin.service';
 export class ListadminComponent implements OnInit {
 
   constructor(
-    private list:ListadminService
+    private list:ListadminService,private _snackBar:MatSnackBar
   ) { }
 
   users:[];
 
   ngOnInit() {
     this.listAdminDetails();
+  }
+  openSnackBar(message, action) {
+    this._snackBar.open(message, action, {
+      duration: 2000,
+    
+    });
   }
   listAdminDetails()
   {
@@ -23,6 +30,9 @@ export class ListadminComponent implements OnInit {
       this.users = res;
     }, (err)=>{
       console.log(err.error.message);
+      let message:string = err.error.message;
+      let action:string  = 'close';
+      this.openSnackBar(message,action);
     });
   }
 }

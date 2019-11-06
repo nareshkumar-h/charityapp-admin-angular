@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AddCategoryService } from '../add-category.service';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-list-category',
@@ -8,11 +9,17 @@ import { AddCategoryService } from '../add-category.service';
 })
 export class ListCategoryComponent implements OnInit {
 
-  constructor(private donor:AddCategoryService) { }
+  constructor(private donor:AddCategoryService,private _snackBar:MatSnackBar) { }
   data:any;
 
   ngOnInit() {
     this.listcategory();
+  }
+  openSnackBar(message, action) {
+    this._snackBar.open(message, action, {
+      duration: 2000,
+    
+    });
   }
   listcategory() {
     this.donor.listcategory().subscribe( (res) => {
@@ -21,6 +28,9 @@ export class ListCategoryComponent implements OnInit {
      // alert('success');
     }, (err) =>{
       console.log('error=>'+JSON.stringify(err));
+      let message:string = err.error.message;
+      let action:string  = 'close';
+      this.openSnackBar(message,action);
     });
   
   }
