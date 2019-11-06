@@ -30,7 +30,8 @@ import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.co
 import { AssignvideoComponent } from './core/assignvideo/assignvideo.component';
 import { AvatarModule } from 'ngx-avatar';
 import { HomeComponent } from './core/home/home.component';
-import { MatSnackBarModule } from '@angular/material';
+import { MatSnackBarModule ,MatButtonModule} from '@angular/material';
+
 
 import { UserService } from './service/user.service';
 @NgModule({
@@ -60,7 +61,7 @@ import { UserService } from './service/user.service';
     FormsModule,
     AvatarModule,
     BrowserAnimationsModule,
-    MatSnackBarModule
+    MatSnackBarModule,MatButtonModule
   ],
   providers: [
     AdminserviceService,
