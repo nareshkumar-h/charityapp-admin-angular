@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ListdonorService } from 'src/app/service/listdonor.service';
 import { MatSnackBar } from '@angular/material';
+import { UserService } from 'src/app/service/user.service';
 @Component({
   selector: 'app-listdonor',
   templateUrl: './listdonor.component.html',
@@ -9,7 +10,8 @@ import { MatSnackBar } from '@angular/material';
 export class ListdonorComponent implements OnInit {
 
   constructor(
-    private list:ListdonorService,private _snackBar:MatSnackBar
+    private list:ListdonorService,private _snackBar:MatSnackBar,
+    private userService:UserService
   ) { }
 
   ngOnInit() {
@@ -35,6 +37,45 @@ export class ListdonorComponent implements OnInit {
       let action:string  = 'close';
       this.openSnackBar(message,action);
     });
+  }
+
+  activate(id:any)
+  {
+    let userStatus:boolean = true;
+    let formData:any = {
+      active:userStatus
+    };
+    this.userService.updatedUserActiveStatus(id,formData).subscribe( (res) => {
+      // console.log(res);
+      //alert("Activted success");
+      let message:string = "Activation success";
+      let action:string  = 'close';
+      this.openSnackBar(message,action);
+      this.listDonorDetails();
+    }, (err) => {
+     // alert("Activted failure");
+      let message:string = "Activation failure";
+      let action:string  = 'close';
+      this.openSnackBar(message,action);
+      // console.log(err.error.message);
+    });
+    // console.log(id+":"+userStatus);
+  }
+  deActivate(id:any)
+  {
+    let userStatus:boolean = false;
+    let formData:any = {
+      active:userStatus
+    };
+    this.userService.updatedUserActiveStatus(id,formData).subscribe( (res) => {
+      // console.log(res);
+      alert("Deactivted success");
+      this.listDonorDetails();
+    }, (err) => {
+      // console.log(err.error.message);
+      alert("Deactivted failure");
+    });
+    console.log(id+":"+userStatus);
   }
 
 }

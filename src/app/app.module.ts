@@ -31,6 +31,8 @@ import { AssignvideoComponent } from './core/assignvideo/assignvideo.component';
 import { AvatarModule } from 'ngx-avatar';
 import { HomeComponent } from './core/home/home.component';
 import { MatSnackBarModule } from '@angular/material';
+
+import { UserService } from './service/user.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,7 +70,8 @@ import { MatSnackBarModule } from '@angular/material';
     AdminregisterService,
     ListadminService,
     ListdonorService,
-    AuthService
+    AuthService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
