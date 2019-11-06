@@ -12,7 +12,7 @@ export class LoginserviceService {
   //apiUrl:string = 'https://charityapp-user-service.herokuapp.com';
   
   //apiUrl='https://userapp-v1.herokuapp.com';
-  apiUrl='https://peaceful-scrubland-89780.herokuapp.com/userapp';
+  apiUrl='https://charityapp-api-gateway.herokuapp.com/userapp';
   adminLogin(formData:any):any
   {
     return this.http.post(this.apiUrl+'/admin/login',formData);

@@ -9,11 +9,8 @@
               
                 <div class="form-label-group">
                  <label for="inputEmail">Category</label>
-
-                  <select name="Category Id"  [(ngModel)]="categoryId"id="categoryId"class="form-control">
-                      
+                  <select name="Category Id"  [(ngModel)]="categoryId"id="categoryId"class="form-control"> 
                     <option *ngFor="let data of categories" value="{{data.id }}">{{data.categoryName}}</option>
-                  
                 </select>
                 </div>
                 <div class="form-label-group">

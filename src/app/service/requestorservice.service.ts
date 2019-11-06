@@ -9,8 +9,8 @@ export class RequestorserviceService {
   constructor(
     private http:HttpClient
   ) { }
-  //apiUrl='https://charityapp-content-ms.herokuapp.com/'
-  apiUrl='https://peaceful-scrubland-89780.herokuapp.com/contentapp/';
+  apiUrl='https://charityapp-content-ms.herokuapp.com/'
+  //apiUrl='https://peaceful-scrubland-89780.herokuapp.com/contentapp/';
    //apiUrl = 'http://localhost:9007/';
   Requestorvideo(formData:any):any
   {
