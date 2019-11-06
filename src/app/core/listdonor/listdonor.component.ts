@@ -53,7 +53,7 @@ export class ListdonorComponent implements OnInit {
       this.openSnackBar(message,action);
       this.listDonorDetails();
     }, (err) => {
-     // alert("Activted failure");
+     //git alert("Activted failure");
       let message:string = "Activation failure";
       let action:string  = 'close';
       this.openSnackBar(message,action);
@@ -69,11 +69,15 @@ export class ListdonorComponent implements OnInit {
     };
     this.userService.updatedUserActiveStatus(id,formData).subscribe( (res) => {
       // console.log(res);
-      alert("Deactivted success");
+      let message:string = "Deactivation success";
+      let action:string  = 'close';
+      this.openSnackBar(message,action);
       this.listDonorDetails();
     }, (err) => {
       // console.log(err.error.message);
-      alert("Deactivted failure");
+      let message:string = "Deactivation failure";
+      let action:string  = 'close';
+      this.openSnackBar(message,action);
     });
     console.log(id+":"+userStatus);
   }
