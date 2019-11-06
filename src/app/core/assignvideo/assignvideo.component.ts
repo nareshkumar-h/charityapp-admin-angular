@@ -44,7 +44,7 @@ export class AssignvideoComponent implements OnInit {
     console.log(formData);
     this.requestorvideo.Requestorvideo(formData).subscribe( (res) => {
       console.log(JSON.stringify(res));
-      this.router.navigate(['viewvideo']);
+     // this.router.navigate(['viewvideo']);
       alert('video Added successfully');
     }, (err) =>{
       console.log('error=>'+JSON.stringify(err));
