@@ -5,13 +5,13 @@
           <div class="card card-signin my-5">
             <div class="card-body">
               <h5 class="card-title text-center">Add Category</h5>
-<form (submit) = "addcategory()">
+<form (submit) = "addcategory()"ngNativeValidate>
     <br>
 <!-- <input type="number" name="requestId" id="" [(ngModel)]="requestId" placeholder="RequestId"><br> -->
 <div style="text-align: center;">
 
 
-<input type="String" name="categoryName" id="" [(ngModel)]="categoryName" placeholder="Category Name">
+<input type="String" name="categoryName" id="categoryName"[(ngModel)]="categoryName"class="form-control" placeholder="Category Name" required>
 <br><br>
 <button type="submit" class="" mat-raised-button color="primary" type="submit">Add Category</button>&nbsp;
                    <button type="reset" class="" mat-raised-button color="warn">Reset</button>

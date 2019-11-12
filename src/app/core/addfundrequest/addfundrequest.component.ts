@@ -31,9 +31,11 @@ export class AddfundrequestComponent implements OnInit {
   openSnackBar(message, action) {
     this._snackBar.open(message, action, {
       duration: 2000,
+      
     
     });
   }
+  
   addrequest()
   {
    let user:any= JSON.parse(localStorage.getItem('LOGGED_IN_USER'));

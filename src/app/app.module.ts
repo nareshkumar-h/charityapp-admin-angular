@@ -30,7 +30,7 @@ import { ForgotpasswordComponent } from './core/forgotpassword/forgotpassword.co
 import { AssignvideoComponent } from './core/assignvideo/assignvideo.component';
 import { AvatarModule } from 'ngx-avatar';
 import { HomeComponent } from './core/home/home.component';
-import { MatSnackBarModule ,MatButtonModule} from '@angular/material';
+import { MatSnackBarModule ,MatButtonModule,MatInputModule,MatSelectModule,MatCardModule, MatTableModule} from '@angular/material';
 
 
 import { UserService } from './service/user.service';
@@ -61,7 +61,10 @@ import { UserService } from './service/user.service';
     FormsModule,
     AvatarModule,
     BrowserAnimationsModule,
-    MatSnackBarModule,MatButtonModule
+    MatSnackBarModule,MatButtonModule,
+    MatInputModule,MatSelectModule,
+    MatCardModule,
+    MatTableModule,
   ],
   providers: [
     AdminserviceService,

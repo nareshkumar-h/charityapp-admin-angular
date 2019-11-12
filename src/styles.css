@@ -1,1 +1,9 @@
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
+.example-full-width{
+    min-width: 150px;
+    width: 100%;
+}
+.cdk-global-overlay-wrapper {
+    align-items: flex-start !important;
+    justify-content: center !important
+  }

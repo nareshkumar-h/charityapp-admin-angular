@@ -20,6 +20,7 @@ export class AddVideoComponent implements OnInit {
   openSnackBar(message, action) {
     this._snackBar.open(message, action, {
       duration: 2000,
+      
     
     });
   }
